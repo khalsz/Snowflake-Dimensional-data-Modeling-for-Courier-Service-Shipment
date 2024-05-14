@@ -1,0 +1,101 @@
+shipment_id,customer_name,customer_city,customer_state,customer_country,customer_segment,carrier_name,mode_of_transport,carrier_rating,origin_city,origin_state,origin_country,destination_city,destination_state,destination_country,product_name,category,unit_price,shipment_date,delivery_date,quantity,total_cost,payment_method,shipping_priority
+1681,Stark Industries,Houston,NY,USA,Logistics,Ocean Freight,Plane,4.5,Seattle,NY,USA,Phoenix,PA,USA,Clothing,Home Goods,42.27,2023-05-15,2023-05-21,89,3762.03,Bank Transfer,Standard
+1597,Expo Logistics,New York,IL,USA,Logistics,Ocean Freight,Ship,4.9,Philadelphia,AZ,USA,Boston,PA,USA,Machinery,Home Goods,51.06,2023-05-23,2023-05-28,124,6331.44,Credit Card,Standard
+1873,Acme Corporation,Chicago,IL,USA,Logistics,Air Cargo,Truck,4.7,Boston,CA,USA,Philadelphia,CA,USA,Clothing,Electronics,41.53,2023-05-14,2023-05-22,183,7599.99,Wire Transfer,Standard
+1770,Apex Solutions,Los Angeles,AZ,USA,Logistics,Ocean Freight,Ship,4.6,San Francisco,TX,USA,Seattle,NY,USA,Books,Electronics,41.99,2023-05-22,2023-05-26,211,8859.89,Wire Transfer,Standard
+1922,Globex Inc.,San Francisco,CA,USA,Wholesale,Air Cargo,Ship,4.4,Phoenix,TX,USA,San Francisco,TX,USA,Laptops,Home Goods,66.21,2023-05-01,2023-05-09,82,5429.22,Bank Transfer,Standard
+1117,Apex Solutions,Seattle,CA,USA,Wholesale,Ocean Freight,Ship,4.8,Phoenix,IL,USA,Los Angeles,IL,USA,Clothing,Industrial,45.05,2023-05-13,2023-05-18,211,9505.55,Wire Transfer,Expedited
+1090,Expo Logistics,San Antonio,AZ,USA,Retail,Express Delivery,Truck,4.7,Philadelphia,NY,USA,Chicago,PA,USA,Clothing,Home Goods,55.61,2023-05-20,2023-05-28,149,8285.89,Credit Card,Standard
+1296,Globex Inc.,Phoenix,IL,USA,Logistics,Express Delivery,Plane,4.2,San Francisco,TX,USA,Philadelphia,PA,USA,Books,Media,40.42,2023-05-24,2023-05-31,63,2546.46,Bank Transfer,Standard
+1421,Acme Corporation,Chicago,TX,USA,Logistics,Express Delivery,Truck,4.6,New York,AZ,USA,Los Angeles,TX,USA,Clothing,Electronics,55.36,2023-05-28,2023-06-04,66,3653.76,Credit Card,Standard
+1345,Acme Corporation,Philadelphia,TX,USA,Retail,Express Delivery,Ship,4.3,Seattle,NY,USA,Boston,IL,USA,Machinery,Apparel,41.09,2023-05-02,2023-05-09,151,6204.59,Bank Transfer,Expedited
+1999,Expo Logistics,Houston,PA,USA,Retail,Air Cargo,Plane,4.5,Phoenix,PA,USA,San Antonio,TX,USA,Clothing,Home Goods,36.69,2023-05-10,2023-05-15,210,7704.9,Wire Transfer,Expedited
+1509,NexGen Enterprises,San Francisco,CA,USA,Wholesale,Ocean Freight,Plane,4.9,Philadelphia,AZ,USA,New York,AZ,USA,Laptops,Home Goods,33.53,2023-05-27,2023-06-04,192,6437.76,Bank Transfer,Standard
+1560,TechFuture Ltd.,Philadelphia,IL,USA,Corporate,Air Cargo,Plane,4.5,Seattle,NY,USA,Los Angeles,CA,USA,Laptops,Media,30.42,2023-05-03,2023-05-11,173,5262.66,Wire Transfer,Expedited
+1149,Stark Industries,Houston,CA,USA,Wholesale,Ocean Freight,Plane,4.5,Houston,IL,USA,Boston,IL,USA,Clothing,Home Goods,61.78,2023-05-25,2023-05-31,187,11552.86,Credit Card,Standard
+1232,Expo Logistics,San Diego,IL,USA,Corporate,Express Delivery,Truck,4.3,San Francisco,CA,USA,San Francisco,NY,USA,Books,Media,38.18,2023-05-09,2023-05-14,128,4887.04,Wire Transfer,Expedited
+1865,Acme Corporation,New York,AZ,USA,Retail,Air Cargo,Truck,4.8,San Francisco,CA,USA,Seattle,CA,USA,Books,Home Goods,38.35,2023-05-16,2023-05-23,90,3451.5,Wire Transfer,Expedited
+1262,Expo Logistics,New York,NY,USA,Wholesale,Ocean Freight,Plane,4.1,San Antonio,CA,USA,San Diego,NY,USA,Books,Electronics,53.27,2023-05-19,2023-05-24,177,9428.79,Credit Card,Expedited
+1697,TechFuture Ltd.,Boston,PA,USA,Wholesale,Air Cargo,Ship,5.0,Phoenix,AZ,USA,San Francisco,CA,USA,Laptops,Electronics,55.12,2023-05-21,2023-05-28,223,12291.76,Credit Card,Expedited
+1871,Acme Corporation,Houston,IL,USA,Wholesale,Express Delivery,Ship,4.1,Boston,CA,USA,Chicago,NY,USA,Laptops,Media,41.46,2023-05-12,2023-05-17,137,5680.02,Wire Transfer,Standard
+1563,Acme Corporation,Los Angeles,IL,USA,Corporate,Air Cargo,Plane,4.6,Philadelphia,PA,USA,Chicago,NY,USA,Books,Electronics,41.49,2023-05-19,2023-05-24,99,4107.51,Wire Transfer,Standard
+1238,TechFuture Ltd.,New York,NY,USA,Logistics,Air Cargo,Plane,4.2,Los Angeles,TX,USA,Boston,TX,USA,Clothing,Apparel,63.64,2023-05-23,2023-05-30,93,5918.52,Wire Transfer,Standard
+1576,TechFuture Ltd.,Seattle,IL,USA,Retail,Air Cargo,Truck,4.9,Boston,NY,USA,New York,IL,USA,Furniture,Home Goods,67.78,2023-05-15,2023-05-19,151,10234.78,Wire Transfer,Expedited
+1634,TechFuture Ltd.,Los Angeles,TX,USA,Logistics,Ocean Freight,Truck,4.1,Houston,NY,USA,Boston,AZ,USA,Clothing,Electronics,49.55,2023-05-27,2023-06-01,98,4855.9,Wire Transfer,Standard
+1727,Expo Logistics,San Antonio,CA,USA,Corporate,Air Cargo,Plane,4.5,San Antonio,NY,USA,New York,PA,USA,Furniture,Electronics,64.07,2023-05-27,2023-06-02,226,14479.82,Credit Card,Standard
+1553,Globex Inc.,San Francisco,IL,USA,Wholesale,Air Cargo,Ship,4.7,Philadelphia,TX,USA,Chicago,NY,USA,Books,Apparel,69.73,2023-05-20,2023-05-28,118,8228.14,Wire Transfer,Standard
+1313,NexGen Enterprises,Seattle,NY,USA,Logistics,Ocean Freight,Ship,4.6,Philadelphia,PA,USA,Los Angeles,NY,USA,Furniture,Apparel,42.14,2023-05-30,2023-06-04,166,6995.24,Wire Transfer,Expedited
+1135,Apex Solutions,New York,PA,USA,Wholesale,Ocean Freight,Truck,4.8,San Diego,NY,USA,Philadelphia,PA,USA,Laptops,Electronics,37.93,2023-05-01,2023-05-05,137,5196.41,Wire Transfer,Standard
+1069,Apex Solutions,San Antonio,TX,USA,Corporate,Express Delivery,Plane,4.1,Phoenix,CA,USA,New York,IL,USA,Clothing,Apparel,48.48,2023-05-16,2023-05-23,136,6593.28,Credit Card,Standard
+1360,Stark Industries,San Antonio,CA,USA,Retail,Ocean Freight,Plane,4.4,Seattle,PA,USA,Los Angeles,AZ,USA,Machinery,Home Goods,52.96,2023-05-06,2023-05-14,162,8579.52,Credit Card,Expedited
+1346,Apex Solutions,Seattle,TX,USA,Logistics,Express Delivery,Plane,4.5,Philadelphia,IL,USA,San Diego,NY,USA,Furniture,Industrial,52.38,2023-05-09,2023-05-14,167,8747.46,Wire Transfer,Expedited
+1965,Dynaco Systems,New York,TX,USA,Corporate,Express Delivery,Plane,4.8,Phoenix,AZ,USA,Los Angeles,IL,USA,Furniture,Home Goods,68.24,2023-05-18,2023-05-25,157,10713.68,Wire Transfer,Standard
+1740,Globex Inc.,San Francisco,NY,USA,Logistics,Express Delivery,Plane,4.1,Los Angeles,TX,USA,Seattle,PA,USA,Laptops,Media,56.95,2023-05-10,2023-05-14,59,3360.05,Wire Transfer,Expedited
+1620,TechFuture Ltd.,Philadelphia,PA,USA,Wholesale,Air Cargo,Truck,4.0,San Francisco,NY,USA,Chicago,CA,USA,Furniture,Electronics,41.21,2023-05-06,2023-05-13,148,6099.08,Credit Card,Standard
+1834,Globex Inc.,New York,PA,USA,Wholesale,Air Cargo,Truck,4.1,Los Angeles,IL,USA,Los Angeles,IL,USA,Furniture,Industrial,40.98,2023-05-21,2023-05-25,78,3196.44,Credit Card,Standard
+1960,TechFuture Ltd.,San Diego,PA,USA,Corporate,Air Cargo,Truck,4.3,Phoenix,PA,USA,Chicago,CA,USA,Books,Apparel,61.18,2023-05-14,2023-05-20,233,14254.94,Credit Card,Standard
+1267,Expo Logistics,Seattle,NY,USA,Corporate,Air Cargo,Plane,4.6,Chicago,AZ,USA,Boston,NY,USA,Machinery,Home Goods,33.78,2023-05-07,2023-05-14,83,2803.74,Bank Transfer,Expedited
+1331,Globex Inc.,New York,AZ,USA,Logistics,Air Cargo,Truck,4.2,Chicago,CA,USA,Boston,AZ,USA,Laptops,Home Goods,33.68,2023-05-23,2023-05-30,75,2526.0,Bank Transfer,Expedited
+1341,Apex Solutions,Seattle,NY,USA,Retail,Ocean Freight,Ship,4.1,Houston,AZ,USA,Boston,CA,USA,Machinery,Home Goods,51.45,2023-05-21,2023-05-28,165,8489.25,Bank Transfer,Standard
+1159,TechFuture Ltd.,San Francisco,IL,USA,Corporate,Express Delivery,Truck,4.8,Philadelphia,NY,USA,New York,NY,USA,Furniture,Media,36.02,2023-05-06,2023-05-10,100,3602.0,Credit Card,Standard
+1140,Acme Corporation,Seattle,IL,USA,Retail,Express Delivery,Ship,4.7,Phoenix,PA,USA,Seattle,AZ,USA,Furniture,Industrial,67.59,2023-05-16,2023-05-24,142,9597.78,Credit Card,Expedited
+1344,Acme Corporation,Philadelphia,IL,USA,Corporate,Air Cargo,Truck,5.0,Philadelphia,PA,USA,Los Angeles,IL,USA,Machinery,Apparel,48.56,2023-05-08,2023-05-14,131,6361.36,Bank Transfer,Standard
+1427,Apex Solutions,San Diego,PA,USA,Logistics,Air Cargo,Ship,4.9,Houston,TX,USA,Houston,IL,USA,Books,Electronics,30.88,2023-05-28,2023-06-04,58,1791.04,Wire Transfer,Standard
+1197,Expo Logistics,Boston,TX,USA,Corporate,Air Cargo,Plane,4.4,Boston,NY,USA,Los Angeles,CA,USA,Machinery,Industrial,47.85,2023-05-16,2023-05-22,203,9713.55,Credit Card,Expedited
+1230,NexGen Enterprises,San Antonio,IL,USA,Logistics,Air Cargo,Truck,4.8,Los Angeles,PA,USA,San Francisco,IL,USA,Books,Media,62.95,2023-05-21,2023-05-25,72,4532.4,Wire Transfer,Standard
+1448,Acme Corporation,Chicago,CA,USA,Wholesale,Ocean Freight,Ship,4.6,Houston,PA,USA,Chicago,AZ,USA,Machinery,Home Goods,39.65,2023-05-09,2023-05-15,172,6819.8,Credit Card,Standard
+1396,Globex Inc.,San Diego,NY,USA,Wholesale,Air Cargo,Plane,4.8,Boston,PA,USA,New York,CA,USA,Clothing,Apparel,65.8,2023-05-29,2023-06-04,52,3421.6,Wire Transfer,Expedited
+1344,Stark Industries,Los Angeles,CA,USA,Corporate,Ocean Freight,Ship,4.5,Philadelphia,PA,USA,Houston,NY,USA,Laptops,Home Goods,59.75,2023-05-08,2023-05-14,103,6154.25,Bank Transfer,Standard
+1863,Dynaco Systems,Seattle,AZ,USA,Wholesale,Ocean Freight,Ship,4.9,Phoenix,TX,USA,San Diego,PA,USA,Clothing,Industrial,54.29,2023-05-07,2023-05-11,70,3800.3,Credit Card,Standard
+1148,Globex Inc.,Philadelphia,TX,USA,Corporate,Express Delivery,Ship,4.3,San Antonio,IL,USA,Chicago,CA,USA,Furniture,Industrial,43.13,2023-05-19,2023-05-27,231,9963.03,Wire Transfer,Standard
+1135,Dynaco Systems,Los Angeles,CA,USA,Logistics,Air Cargo,Truck,4.6,San Francisco,CA,USA,Philadelphia,CA,USA,Laptops,Electronics,49.82,2023-05-18,2023-05-22,70,3487.4,Wire Transfer,Expedited
+1387,Stark Industries,Seattle,AZ,USA,Logistics,Express Delivery,Ship,4.4,Boston,IL,USA,New York,AZ,USA,Clothing,Home Goods,66.92,2023-05-05,2023-05-10,58,3881.36,Credit Card,Standard
+1892,TechFuture Ltd.,San Francisco,PA,USA,Corporate,Air Cargo,Ship,4.1,Phoenix,AZ,USA,New York,TX,USA,Clothing,Media,32.17,2023-05-20,2023-05-28,225,7238.25,Wire Transfer,Standard
+1554,Apex Solutions,Seattle,NY,USA,Logistics,Air Cargo,Plane,4.3,Houston,CA,USA,Seattle,PA,USA,Furniture,Media,59.72,2023-05-13,2023-05-17,164,9794.08,Wire Transfer,Standard
+1633,Apex Solutions,Phoenix,NY,USA,Retail,Express Delivery,Ship,4.5,San Francisco,IL,USA,San Antonio,AZ,USA,Books,Electronics,55.48,2023-05-13,2023-05-17,156,8654.88,Credit Card,Expedited
+1724,TechFuture Ltd.,Phoenix,NY,USA,Wholesale,Ocean Freight,Ship,4.6,Chicago,NY,USA,Seattle,TX,USA,Laptops,Electronics,63.63,2023-05-19,2023-05-23,217,13807.71,Credit Card,Expedited
+1127,NexGen Enterprises,San Francisco,CA,USA,Retail,Air Cargo,Truck,4.9,Boston,TX,USA,Los Angeles,TX,USA,Furniture,Apparel,52.82,2023-05-14,2023-05-20,71,3750.22,Wire Transfer,Standard
+1864,NexGen Enterprises,Phoenix,CA,USA,Retail,Air Cargo,Plane,4.5,Houston,CA,USA,San Antonio,IL,USA,Books,Home Goods,53.56,2023-05-09,2023-05-14,200,10712.0,Bank Transfer,Standard
+1914,Expo Logistics,New York,CA,USA,Retail,Ocean Freight,Truck,4.2,Houston,TX,USA,Chicago,PA,USA,Books,Home Goods,64.34,2023-05-08,2023-05-14,130,8364.2,Bank Transfer,Expedited
+1145,Acme Corporation,San Diego,IL,USA,Retail,Ocean Freight,Plane,5.0,Phoenix,TX,USA,San Francisco,IL,USA,Books,Home Goods,41.32,2023-05-08,2023-05-14,225,9297.0,Wire Transfer,Expedited
+1640,Expo Logistics,San Antonio,IL,USA,Logistics,Express Delivery,Ship,4.9,Philadelphia,TX,USA,San Diego,PA,USA,Machinery,Industrial,64.42,2023-05-10,2023-05-16,162,10436.04,Bank Transfer,Standard
+1987,Globex Inc.,Houston,IL,USA,Retail,Air Cargo,Ship,5.0,Seattle,IL,USA,Philadelphia,CA,USA,Furniture,Industrial,55.31,2023-05-08,2023-05-13,194,10730.14,Wire Transfer,Standard
+1674,Stark Industries,Houston,NY,USA,Corporate,Ocean Freight,Ship,4.2,Boston,PA,USA,San Francisco,NY,USA,Furniture,Electronics,58.88,2023-05-24,2023-06-01,167,9832.96,Wire Transfer,Expedited
+1851,Expo Logistics,Seattle,AZ,USA,Logistics,Express Delivery,Plane,4.9,Phoenix,AZ,USA,Phoenix,AZ,USA,Furniture,Industrial,53.06,2023-05-17,2023-05-21,197,10452.82,Bank Transfer,Standard
+1801,Expo Logistics,Phoenix,CA,USA,Logistics,Air Cargo,Ship,4.7,New York,NY,USA,New York,PA,USA,Clothing,Electronics,68.35,2023-05-17,2023-05-24,78,5331.3,Wire Transfer,Standard
+1968,Apex Solutions,San Francisco,IL,USA,Logistics,Ocean Freight,Ship,4.7,Chicago,AZ,USA,Chicago,TX,USA,Furniture,Electronics,66.67,2023-05-04,2023-05-10,106,7067.02,Credit Card,Expedited
+1129,Expo Logistics,San Antonio,TX,USA,Logistics,Express Delivery,Plane,5.0,Houston,AZ,USA,San Francisco,PA,USA,Clothing,Home Goods,30.28,2023-05-10,2023-05-15,85,2573.8,Wire Transfer,Expedited
+1156,Dynaco Systems,San Diego,TX,USA,Corporate,Express Delivery,Plane,4.0,Los Angeles,NY,USA,Chicago,TX,USA,Laptops,Industrial,58.81,2023-05-07,2023-05-11,80,4704.8,Bank Transfer,Standard
+1606,Stark Industries,Boston,PA,USA,Logistics,Express Delivery,Truck,4.8,Chicago,AZ,USA,San Francisco,PA,USA,Clothing,Media,36.82,2023-05-26,2023-05-31,245,9020.9,Bank Transfer,Expedited
+1340,Apex Solutions,Phoenix,CA,USA,Wholesale,Ocean Freight,Truck,4.8,Los Angeles,CA,USA,Seattle,PA,USA,Clothing,Electronics,33.95,2023-05-20,2023-05-26,109,3700.55,Bank Transfer,Standard
+1969,Acme Corporation,San Antonio,IL,USA,Logistics,Express Delivery,Ship,4.0,Philadelphia,PA,USA,Houston,NY,USA,Clothing,Apparel,31.68,2023-05-18,2023-05-25,206,6526.08,Wire Transfer,Standard
+1328,Globex Inc.,San Diego,PA,USA,Corporate,Express Delivery,Plane,4.3,San Francisco,TX,USA,Boston,NY,USA,Machinery,Home Goods,50.3,2023-05-08,2023-05-13,235,11820.5,Wire Transfer,Standard
+1602,Stark Industries,Houston,AZ,USA,Logistics,Express Delivery,Plane,4.2,Chicago,IL,USA,Chicago,PA,USA,Laptops,Home Goods,65.0,2023-05-13,2023-05-18,208,13520.0,Bank Transfer,Expedited
+1962,Stark Industries,Los Angeles,IL,USA,Logistics,Air Cargo,Truck,4.9,Seattle,NY,USA,San Antonio,IL,USA,Machinery,Electronics,68.56,2023-05-17,2023-05-23,109,7473.04,Wire Transfer,Standard
+1402,Dynaco Systems,Boston,TX,USA,Corporate,Ocean Freight,Truck,5.0,New York,PA,USA,New York,IL,USA,Books,Media,59.07,2023-05-15,2023-05-22,61,3603.27,Credit Card,Standard
+1663,Dynaco Systems,San Antonio,IL,USA,Retail,Express Delivery,Ship,4.4,Phoenix,PA,USA,San Antonio,CA,USA,Clothing,Home Goods,49.05,2023-05-28,2023-06-05,208,10202.4,Credit Card,Expedited
+1111,Stark Industries,New York,NY,USA,Corporate,Air Cargo,Plane,4.9,Seattle,NY,USA,Philadelphia,NY,USA,Clothing,Electronics,31.02,2023-05-05,2023-05-12,121,3753.42,Bank Transfer,Expedited
+1388,Dynaco Systems,Phoenix,NY,USA,Corporate,Ocean Freight,Plane,4.6,Chicago,CA,USA,Phoenix,PA,USA,Machinery,Apparel,42.11,2023-05-16,2023-05-23,239,10064.29,Bank Transfer,Expedited
+2000,Acme Corporation,San Antonio,AZ,USA,Retail,Air Cargo,Ship,4.3,Phoenix,PA,USA,Los Angeles,CA,USA,Books,Home Goods,65.94,2023-05-21,2023-05-28,84,5538.96,Bank Transfer,Expedited
+1240,NexGen Enterprises,San Francisco,CA,USA,Retail,Ocean Freight,Truck,4.4,San Antonio,TX,USA,Chicago,TX,USA,Machinery,Media,49.45,2023-05-11,2023-05-19,190,9395.5,Wire Transfer,Expedited
+1965,NexGen Enterprises,Seattle,IL,USA,Retail,Express Delivery,Truck,4.5,New York,IL,USA,San Antonio,PA,USA,Books,Electronics,65.04,2023-05-19,2023-05-25,114,7414.56,Wire Transfer,Standard
+1746,Apex Solutions,Seattle,AZ,USA,Wholesale,Air Cargo,Truck,4.3,Los Angeles,TX,USA,San Antonio,CA,USA,Books,Media,54.02,2023-05-17,2023-05-23,143,7724.86,Wire Transfer,Expedited
+1927,NexGen Enterprises,Los Angeles,AZ,USA,Retail,Express Delivery,Ship,4.6,Boston,CA,USA,Chicago,PA,USA,Furniture,Industrial,65.22,2023-05-08,2023-05-16,227,14804.94,Credit Card,Expedited
+1705,Expo Logistics,San Diego,PA,USA,Corporate,Express Delivery,Ship,4.1,Houston,CA,USA,Chicago,NY,USA,Machinery,Industrial,36.5,2023-05-15,2023-05-22,125,4562.5,Wire Transfer,Expedited
+1193,NexGen Enterprises,San Francisco,CA,USA,Corporate,Air Cargo,Ship,4.3,Boston,NY,USA,Phoenix,CA,USA,Clothing,Electronics,31.18,2023-05-13,2023-05-18,211,6578.98,Wire Transfer,Standard
+1827,Globex Inc.,Philadelphia,TX,USA,Retail,Express Delivery,Plane,4.2,Seattle,AZ,USA,Los Angeles,IL,USA,Books,Apparel,69.1,2023-05-05,2023-05-09,210,14511.0,Credit Card,Standard
+1562,NexGen Enterprises,New York,CA,USA,Logistics,Express Delivery,Truck,4.9,San Diego,IL,USA,Chicago,AZ,USA,Books,Electronics,37.58,2023-05-03,2023-05-07,111,4171.38,Credit Card,Standard
+1934,Stark Industries,Boston,AZ,USA,Logistics,Ocean Freight,Ship,4.3,San Diego,NY,USA,New York,PA,USA,Machinery,Media,38.1,2023-05-18,2023-05-24,109,4152.9,Credit Card,Expedited
+1798,TechFuture Ltd.,San Diego,IL,USA,Retail,Air Cargo,Plane,4.0,Seattle,TX,USA,San Antonio,PA,USA,Clothing,Media,30.24,2023-05-10,2023-05-15,98,2963.52,Wire Transfer,Expedited
+1667,NexGen Enterprises,Phoenix,IL,USA,Retail,Express Delivery,Plane,4.1,Philadelphia,NY,USA,Houston,CA,USA,Machinery,Home Goods,45.44,2023-05-07,2023-05-15,227,10314.88,Credit Card,Standard
+1858,Apex Solutions,San Francisco,AZ,USA,Logistics,Air Cargo,Plane,4.8,San Antonio,TX,USA,San Diego,TX,USA,Clothing,Media,34.06,2023-05-10,2023-05-17,121,4121.26,Credit Card,Standard
+1931,Globex Inc.,Boston,IL,USA,Corporate,Air Cargo,Plane,4.9,Philadelphia,NY,USA,San Antonio,PA,USA,Machinery,Electronics,62.5,2023-05-28,2023-06-03,71,4437.5,Wire Transfer,Expedited
+1713,NexGen Enterprises,San Antonio,IL,USA,Wholesale,Express Delivery,Ship,4.6,Phoenix,CA,USA,Houston,AZ,USA,Clothing,Apparel,65.15,2023-05-23,2023-05-30,108,7036.2,Wire Transfer,Expedited
+1410,Expo Logistics,Seattle,AZ,USA,Wholesale,Air Cargo,Truck,4.5,Los Angeles,NY,USA,Philadelphia,AZ,USA,Laptops,Industrial,60.53,2023-05-24,2023-06-01,243,14708.79,Wire Transfer,Standard
+1605,Dynaco Systems,Houston,IL,USA,Retail,Express Delivery,Ship,4.4,San Diego,TX,USA,Houston,NY,USA,Laptops,Electronics,62.75,2023-05-23,2023-05-31,237,14871.75,Credit Card,Expedited
+1424,TechFuture Ltd.,San Antonio,IL,USA,Corporate,Air Cargo,Truck,4.4,Phoenix,TX,USA,Boston,NY,USA,Furniture,Industrial,37.94,2023-05-09,2023-05-17,118,4476.92,Bank Transfer,Expedited
+1046,Globex Inc.,Boston,AZ,USA,Retail,Express Delivery,Plane,4.2,Seattle,NY,USA,San Diego,TX,USA,Machinery,Industrial,43.19,2023-05-22,2023-05-30,102,4405.38,Credit Card,Standard
+1814,NexGen Enterprises,Philadelphia,AZ,USA,Retail,Express Delivery,Truck,4.1,San Francisco,CA,USA,San Diego,CA,USA,Clothing,Electronics,62.54,2023-05-10,2023-05-15,127,7942.58,Credit Card,Standard
+1954,Apex Solutions,Philadelphia,NY,USA,Corporate,Ocean Freight,Truck,4.8,Los Angeles,NY,USA,Los Angeles,NY,USA,Clothing,Media,33.64,2023-05-09,2023-05-14,83,2792.12,Wire Transfer,Expedited
+1017,Stark Industries,New York,NY,USA,Logistics,Express Delivery,Truck,4.2,Houston,CA,USA,Seattle,CA,USA,Furniture,Industrial,52.44,2023-05-14,2023-05-19,183,9596.52,Bank Transfer,Expedited
+1315,Stark Industries,Seattle,AZ,USA,Corporate,Air Cargo,Ship,4.7,San Diego,CA,USA,Houston,PA,USA,Laptops,Home Goods,55.98,2023-05-11,2023-05-15,58,3246.84,Credit Card,Expedited
