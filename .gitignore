@@ -1,4 +1,4 @@
 #ignore config file
 config/config.py
-
+raw_data.csv
 venv
