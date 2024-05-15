@@ -1,0 +1,4 @@
+#ignore config file
+config/config.py
+
+venv
