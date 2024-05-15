@@ -1,7 +1,8 @@
-# Courier Delivery Snowflake Data Dimensional Modelling
+# Snowflake Schema Dimensional Modeling of Courier Deliveries
+
 ## Overview
 
-This project provides a Python Snowflake data dimensional modelling for modeling courier delivery data into datawarehouse. It can be used to ingest data from a CSV file, create and populate dimension and fact tables in a snowflake schema database (PostgreSQL in this example), and execute user-defined SQL queries for further analysis.
+This project provides a Python Snowflake data dimensional modeling for modeling courier delivery data into data warehouse. It can be used to ingest data from a CSV file, create and populate dimension and fact tables in a snowflake schema database (PostgreSQL in this example), and execute user-defined SQL queries for further analysis.
 
 ## Features
 
@@ -24,7 +25,7 @@ The project is organized into the following directories and files:
 
 * **dataload/**     
     * `date_convert.py`: This file contains functions converting string to date format and extracting month, year, quarter.
-    * `tables_data.py`: This file defines a functions generate different database table data.
+    * `tables_data.py`: This file defines a function that generates different database table data.
     * `unique_subset.py`: This file provides functionality to subset a dataframe based on unique sets of values in a column.
 
 * **requirements.txt**: This file lists the Python dependencies required for the project.
