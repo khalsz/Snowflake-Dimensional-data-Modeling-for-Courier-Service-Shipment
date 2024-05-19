@@ -2,9 +2,9 @@ from sqlalchemy import insert
 import pandas as pd
 from sqlalchemy.orm import  Session
 from database.create_table import Time, Product, Category, Delivery, Shipment, Courier, Destination, Origin, Customer
-from database.create_table import City, Payment, Fact
-from dataload.tables_data import generate_product_data, generate_customer_data, generate_courier_data
-from dataload.tables_data import generate_date_data, generate_fact_data
+from database.create_table import City, Payment, Fact, Shipping, PriorTransport
+from dataload.tables_data import product_data, customer_data, courier_data
+from dataload.tables_data import date_data, fact_data, shipping_data
 
 def populate_tables(engine, data_df: pd.DataFrame) -> None:
   """
@@ -26,14 +26,15 @@ def populate_tables(engine, data_df: pd.DataFrame) -> None:
 
   try:
       # Extract and transform data for different tables from the source DataFrame
-      courier_df, origin_df, destination_df = generate_courier_data(data_df)
-      customer_df, payment_df, customer_city_df = generate_customer_data(data_df)
-      product_df, category_df = generate_product_data(data_df)
-      date_df, delivery_date_df, shipment_date_df = generate_date_data(data_df)
-      fact_df = generate_fact_data(data_df, date_df, courier_df, customer_df, product_df)
+      courier_df, origin_df, destination_df = courier_data(data_df)
+      customer_df, payment_df, customer_city_df = customer_data(data_df)
+      product_df, category_df = product_data(data_df)
+      shipping_df, proir_trans_data_df = shipping_data(data_df)
+      date_df, delivery_date_df, shipment_date_df = date_data(data_df)
+      fact_df = fact_data(data_df, courier_df, customer_df, product_df, 
+                          shipping_df, delivery_date_df, shipment_date_df)
 
-      # Drop shipment_date and delivery_date columns from date_df (assuming not needed)
-      date_df.drop(["shipment_date", "delivery_date"], axis=1, inplace=True)
+
 
       with Session(engine) as session:
           # Insert data into tables using SQLAlchemy insert statements and DataFrame conversion
@@ -41,13 +42,15 @@ def populate_tables(engine, data_df: pd.DataFrame) -> None:
           session.execute(insert(Product), product_df.to_dict(orient='records'))
           session.execute(insert(Destination), destination_df.to_dict(orient='records'))
           session.execute(insert(Origin), origin_df.to_dict(orient='records'))
+          session.execute(insert(Time), date_df.to_dict(orient='records'))  # Assuming Time table for dates
           session.execute(insert(Courier), courier_df.to_dict(orient='records'))
           session.execute(insert(Delivery), delivery_date_df.to_dict(orient='records'))
           session.execute(insert(Shipment), shipment_date_df.to_dict(orient='records'))
-          session.execute(insert(Time), date_df.to_dict(orient='records'))  # Assuming Time table for dates
           session.execute(insert(City), customer_city_df.to_dict(orient='records'))
           session.execute(insert(Payment), payment_df.to_dict(orient='records'))
           session.execute(insert(Customer), customer_df.to_dict(orient='records'))
+          session.execute(insert(PriorTransport), proir_trans_data_df.to_dict(orient='records'))
+          session.execute(insert(Shipping), shipping_df.to_dict(orient='records'))
           session.execute(insert(Fact), fact_df.to_dict(orient='records'))
           session.commit()
 

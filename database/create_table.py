@@ -1,8 +1,8 @@
-from sqlalchemy import  Column, Integer, ForeignKey, String, DATE
+from sqlalchemy import  Column, Integer, ForeignKey, String, DATE, Float
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
-
+# initializing base class to map db_table bject 
 Base = declarative_base()
 
 class Category(Base): 
@@ -14,10 +14,9 @@ class Product(Base):
     __tablename__ = "dim_product"
     product_id = Column( Integer, primary_key=True)
     product_name = Column(String(40))
-    shipping_priority = Column(String(40))
     unit_price = Column(Integer)
-    shipping_priority = Column(String(40))
-    category_id = Column(Integer, ForeignKey("dim_category.category_id"), nullable=False)
+    category_id = Column(Integer, ForeignKey("dim_category.category_id", ondelete='CASCADE', 
+                                             onupdate='CASCADE'), nullable=False)
     category = relationship("Category")
 
 
@@ -26,29 +25,28 @@ class Delivery(Base):
     __tablename__ = "dim_delivery_date"
     delivery_date_id = Column(Integer, primary_key=True)
     delivery_date = Column(DATE)
-    delivery_month = Column(Integer)
-    delivery_quarter = Column(Integer)
-    delivery_year = Column(Integer)
-    delivery_day = Column(Integer)
-    delivery_week_day = Column(String(15))
+    time = relationship("Time")
+    date_id = Column(Integer, ForeignKey("dim_date.date_id", ondelete='CASCADE', 
+                                         onupdate='CASCADE'), nullable=False)
+
 
 class Shipment(Base): 
     __tablename__ = "dim_shipment_date"
     shipment_date_id = Column(Integer, primary_key=True)
-    shipment_date = Column(DATE)
-    shipment_month = Column(Integer)
-    shipment_quarter = Column(Integer)
-    shipment_year = Column(Integer)
-    shipment_day = Column(Integer)
-    shipment_week_day = Column(String(15))
-
+    time = relationship("Time")
+    date_id = Column(Integer, ForeignKey("dim_date.date_id", ondelete='CASCADE', 
+                                         onupdate='CASCADE'), nullable=False)
+    
 class Time(Base): 
     __tablename__ = "dim_date"
     date_id = Column(Integer, primary_key=True)
-    delivery_date_id = Column(Integer, ForeignKey("dim_delivery_date.delivery_date_id"), nullable=False)
-    delivery = relationship("Delivery")
-    shipment_date_id = Column(Integer, ForeignKey("dim_shipment_date.shipment_date_id"), nullable=False)
-    shipment = relationship("Shipment")
+    date = Column(DATE)
+    year = Column(Integer)
+    month = Column(Integer)
+    quarter = Column(Integer)
+    day = Column(Integer)
+    week_day = Column(String(15))
+    
 
 
 class Destination(Base): 
@@ -71,10 +69,11 @@ class Courier(Base):
     courier_id = Column(Integer, primary_key=True)
     carrier_name = Column(String(40))
     carrier_rating = Column(Integer)
-    mode_of_transport = Column(String(40))
-    destination_id = Column(Integer, ForeignKey("dim_courier_destination.destination_id"), nullable=False)
+    destination_id = Column(Integer, ForeignKey("dim_courier_destination.destination_id", ondelete='CASCADE', 
+                                                onupdate='CASCADE'), nullable=False)
     destination = relationship("Destination")
-    origin_id = Column(Integer, ForeignKey("dim_courier_origin.origin_id"), nullable=False)
+    origin_id = Column(Integer, ForeignKey("dim_courier_origin.origin_id", ondelete='CASCADE', 
+                                           onupdate='CASCADE'), nullable=False)
     origin = relationship("Origin")
 
 class City(Base): 
@@ -94,31 +93,63 @@ class Customer(Base):
     customer_id = Column(Integer, primary_key=True)
     customer_name = Column(String(40))    
     customer_segment = Column(String(40))
-    city_id = Column(Integer, ForeignKey("dim_customer_city.city_id"), nullable=False)
+    city_id = Column(Integer, ForeignKey("dim_customer_city.city_id", ondelete='CASCADE', 
+                                         onupdate='CASCADE'), nullable=False)
     city = relationship("City")
-    payment_id = Column(Integer, ForeignKey("dim_customer_payment.payment_id"), nullable=False)
+    payment_id = Column(Integer, ForeignKey("dim_customer_payment.payment_id", ondelete='CASCADE', 
+                                            onupdate='CASCADE'), nullable=False)
     payment = relationship("Payment")
-       
     
-class Fact(Base): 
-    __tablename__ = "fact_table"
+class Shipping(Base): 
+    __tablename__ = 'dim_shipping'
     shipment_id = Column(Integer, primary_key=True)
+    prior_trans_id = Column(Integer, ForeignKey("dim_priority_transport.prior_trans_id", 
+                                                ondelete='CASCADE', onupdate='CASCADE'), nullable=False)
+    prioritytransport = relationship("PriorTransport")
+    
+class PriorTransport(Base): 
+    __tablename__ = 'dim_priority_transport'
+    prior_trans_id = Column(Integer, primary_key=True)
+    mode_of_transport = Column(String(20))
+    shipping_priority = Column(String(20))       
+
+
+class Fact(Base): 
+    __tablename__ = "fact_sales_table"
+    sales_id = Column(Integer, primary_key=True)
     quantity = Column(Integer)
-    total_cost = Column(Integer)
-    courier_id = Column(Integer, ForeignKey("dim_courier.courier_id"), nullable=False)
+    total_cost = Column(Float)
     courier = relationship("Courier")
-    date_id = Column(Integer, ForeignKey("dim_date.date_id"), nullable=False)
-    time = relationship('Time')
-    product_id = Column( Integer, ForeignKey("dim_product.product_id"), nullable=False)
+    courier_id = Column(Integer, ForeignKey("dim_courier.courier_id", ondelete='CASCADE', 
+                                            onupdate='CASCADE'), nullable=False)
+    
+    shipment = relationship('Shipment')
+    shipment_date_id = Column(Integer, ForeignKey("dim_shipment_date.shipment_date_id", ondelete='CASCADE', 
+                                         onupdate='CASCADE'), nullable=False)
+    
+    delivery = relationship('Delivery')
+    delivery_date_id = Column(Integer, ForeignKey("dim_delivery_date.delivery_date_id", ondelete='CASCADE', 
+                                         onupdate='CASCADE'), nullable=False)
+    
     product = relationship('Product')
-    customer_id = Column(Integer, ForeignKey("dim_customer.customer_id"), nullable=False)
+    product_id = Column( Integer, ForeignKey("dim_product.product_id", ondelete='CASCADE', 
+                                             onupdate='CASCADE'), nullable=False)
+    
     customer = relationship('Customer')
+    customer_id = Column(Integer, ForeignKey("dim_customer.customer_id", ondelete='CASCADE', 
+                                             onupdate='CASCADE'), nullable=False)
+     
+    shipping = relationship("Shipping")
+    shipment_id = Column(Integer, ForeignKey("dim_shipping.shipment_id", ondelete='CASCADE', 
+                                             onupdate='CASCADE'), nullable=False)
+    
+    
 
 def create_db_table(engine): 
     """
-    Creates database tables based on SQLAlchemy metadata.
+    Creates database tables based on SQLAlchemy ORM metadata.
 
-    This function drops existing tables (if any) and creates new tables based on the SQLAlchemy metadata defined in Base.
+    This function drops existing tables (if any) and creates new tables based on the SQLAlchemy ORM metadata defined in Base.
 
     Args:
         engine (Engine): SQLAlchemy engine object for the database.
@@ -131,19 +162,20 @@ def create_db_table(engine):
         Base.metadata.drop_all(engine, 
                                tables=[Base.metadata.tables["dim_category"], 
                                        Base.metadata.tables["dim_product"],
+                                       Base.metadata.tables["dim_date"],
                                        Base.metadata.tables["dim_delivery_date"], 
                                        Base.metadata.tables["dim_shipment_date"],
-                                       Base.metadata.tables["dim_date"],
                                        Base.metadata.tables["dim_courier_destination"], 
                                        Base.metadata.tables["dim_courier_origin"], 
                                        Base.metadata.tables["dim_courier"],
                                        Base.metadata.tables["dim_customer_city"], 
                                        Base.metadata.tables["dim_customer_payment"], 
                                        Base.metadata.tables["dim_customer"],
-                                       Base.metadata.tables["fact_table"]]) 
+                                       Base.metadata.tables["fact_sales_table"],
+                                       Base.metadata.tables["dim_shipping"], 
+                                       Base.metadata.tables["dim_priority_transport"]]) 
         # Create new tables
         Base.metadata.create_all(engine)
-        print("all table successfully created")
         
     except Exception as e: 
         raise Exception(f"Error creating tables: {e}")

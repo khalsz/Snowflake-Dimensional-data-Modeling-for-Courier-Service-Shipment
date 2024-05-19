@@ -1,11 +1,10 @@
 from database.db_connect import db_connection
 from database.db_query import query_table
-# from dataload.generate_data import generate_tables
 from config.config import dbconfig
 from database.create_table import create_db_table
 from database.populate_db_table import populate_tables
 import pandas as pd
-from datetime import datetime
+
 
 def main(data_path: str) -> None:
   """
@@ -40,27 +39,27 @@ def main(data_path: str) -> None:
       query_statements = [
           # Calculating total cost revenue by customer name
           """
-          SELECT c.customer_name, sum(f.total_cost) AS total_revenue
-          FROM fact_table f
+          SELECT c.customer_segment, sum(f.total_cost) AS total_revenue
+          FROM fact_sales_table f
           INNER JOIN dim_customer c ON c.customer_id = f.customer_id
-          GROUP BY c.customer_name
+          GROUP BY c.customer_segment
           """,
 
           # Analyzing cost performance by courier name
           """
           SELECT c.carrier_name, sum(f.total_cost) AS total_cost
-          FROM fact_table f
+          FROM fact_sales_table f
           INNER JOIN dim_courier c ON f.courier_id = c.courier_id
           GROUP BY c.carrier_name
           """,
 
           # Analyzing quantity of product by shipment date
           """
-          SELECT dd.shipment_year, dd.shipment_quarter, dd.shipment_month, AVG(f.quantity) AS avg_quantity
-          FROM fact_table f
-          INNER JOIN dim_date d ON d.date_id = f.date_id
-          INNER JOIN dim_shipment_date dd ON dd.shipment_date_id = d.shipment_date_id
-          GROUP BY dd.shipment_year, dd.shipment_quarter, dd.shipment_month
+          SELECT d.month, d.week_day, AVG(f.quantity) AS avg_quantity_shipped
+          FROM fact_sales_table f
+          INNER JOIN dim_shipment_date ds ON ds.shipment_date_id = f.shipment_date_id
+          INNER JOIN dim_date d ON d.date_id = ds.date_id
+          GROUP BY d.month, d.week_day
           """,
       ]
 
