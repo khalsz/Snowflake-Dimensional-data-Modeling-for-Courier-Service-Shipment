@@ -2,7 +2,7 @@ from sqlalchemy import insert
 import pandas as pd
 from sqlalchemy.orm import  Session
 from database.create_table import Time, Product, Category, Delivery, Shipment, Courier, Destination, Origin, Customer
-from database.create_table import City, Payment, Fact, Shipping, PriorTransport
+from database.create_table import City, Payment, Fact, Shipping, PriorTransport, Country
 from dataload.tables_data import product_data, customer_data, courier_data
 from dataload.tables_data import date_data, fact_data, shipping_data
 
@@ -26,7 +26,7 @@ def populate_tables(engine, data_df: pd.DataFrame) -> None:
 
   try:
       # Extract and transform data for different tables from the source DataFrame
-      courier_df, origin_df, destination_df = courier_data(data_df)
+      courier_df, origin_df, destination_df, country_df = courier_data(data_df)
       customer_df, payment_df, customer_city_df = customer_data(data_df)
       product_df, category_df = product_data(data_df)
       shipping_df, proir_trans_data_df = shipping_data(data_df)
@@ -40,6 +40,7 @@ def populate_tables(engine, data_df: pd.DataFrame) -> None:
           # Insert data into tables using SQLAlchemy insert statements and DataFrame conversion
           session.execute(insert(Category), category_df.to_dict(orient='records'))
           session.execute(insert(Product), product_df.to_dict(orient='records'))
+          session.execute(insert(Country), country_df.to_dict(orient='records'))
           session.execute(insert(Destination), destination_df.to_dict(orient='records'))
           session.execute(insert(Origin), origin_df.to_dict(orient='records'))
           session.execute(insert(Time), date_df.to_dict(orient='records'))  # Assuming Time table for dates

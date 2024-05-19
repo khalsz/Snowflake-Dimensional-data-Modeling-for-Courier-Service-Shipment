@@ -47,14 +47,19 @@ class Time(Base):
     day = Column(Integer)
     week_day = Column(String(15))
     
-
+class Country(Base): 
+    __tablename__ = "dim_country"
+    country_id = Column(Integer, primary_key=True)
+    country = Column(String(10))
 
 class Destination(Base): 
     __tablename__ = "dim_courier_destination"
     destination_id = Column(Integer, primary_key=True)
     destination_city = Column(String(50))
     destination_state = Column(String(50))
-    destination_country = Column(String(50))
+    country = relationship("Country")
+    country_id = Column(Integer, ForeignKey("dim_country.country_id", ondelete='CASCADE', 
+                                           onupdate='CASCADE'), nullable=False)
     
 class Origin(Base): 
     __tablename__ = "dim_courier_origin"
@@ -62,7 +67,9 @@ class Origin(Base):
     origin_city = Column(String(50))
     origin_state = Column(String(50))
     origin_country = Column(String(50))
-    
+    country = relationship("Country")
+    country_id = Column(Integer, ForeignKey("dim_country.country_id", ondelete='CASCADE', 
+                                           onupdate='CASCADE'), nullable=False)    
         
 class Courier(Base): 
     __tablename__ = "dim_courier"
@@ -173,7 +180,8 @@ def create_db_table(engine):
                                        Base.metadata.tables["dim_customer"],
                                        Base.metadata.tables["fact_sales_table"],
                                        Base.metadata.tables["dim_shipping"], 
-                                       Base.metadata.tables["dim_priority_transport"]]) 
+                                       Base.metadata.tables["dim_priority_transport"], 
+                                       Base.metadata.tables["dim_country"]]) 
         # Create new tables
         Base.metadata.create_all(engine)
         
