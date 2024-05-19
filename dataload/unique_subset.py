@@ -2,6 +2,7 @@ import pandas as pd
 
 def create_unique_id_with_subset(df: pd.DataFrame, subset_cols: list[str], unique_col: str, 
                                   new_column: str, start_pk_num: int) -> pd.DataFrame:
+    
   """Creates a new column with unique IDs assigned within groups defined by a subset of columns.
 
   This function takes a DataFrame, a list of column names (subset_cols), a column name 
